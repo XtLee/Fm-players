@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="referrer" content="never">
+	<link rel="stylesheet" href="./index.css">
+	<link rel="stylesheet" media="(max-width:768px)" href="./mobile.css">
+	<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="//at.alicdn.com/t/font_475883_ww5q58jxm45nrk9.css">
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script> 
+	<script src="./new-index.js" async></script>
+	<title>Music-Fm</title>
+</head>
+<body>
+	<!-- pc端展示页面 -->
+	<div class="pc">
+		<div class="bg"></div>
+		<div class="active-state">			
+				<div class="main clearfix">
+					<div class="music">
+						<div class="music-img"></div>
+						<div class="tabs">
+							<span class="voice">
+								<i class="fa fa-volume-up"></i>
+								<div class="volume active">
+									<div class="volume-bar"></div>
+								</div>
+							</span>		
+							<span class="stop">
+								<i class="fa fa-pause"></i>
+							</span>
+							<span class="next-song">
+								<i class="fa fa-forward"></i>
+							</span>
+						</div>
+					</div>
+					<div class="info">
+						<div class="list-name">漫步春天</div>
+						<div class="title">TITLE</div>
+						<div class="progress-bar">
+							<div class="PB-all"></div>
+							<div class="PB-now"></div>
+						</div>
+						<div class="singer">SINGER</div>
+					</div>
+				</div>
+				<footer>
+					<div class="music-list">
+						<span class="fa fa-chevron-left"></span>
+						<span class="fa fa-chevron-right"></span>
+						<div class="list">			
+							<ul class="clearfix">
+								<!-- <li>
+									<div class="item"></div>
+									漫步春天
+								</li>
+								<li>
+									<div class="item"></div>
+									漫步春天
+								</li>
+								<li>
+									<div class="item"></div>
+									漫步春天
+								</li> -->
+							</ul>
+						</div>
+					</div>			
+				</footer>
+			</div>
+			<div class="stationary-state active">
+				<div class="img"></div>
+				<div class="content">
+					<div class="bar">
+						<div class="bar-all"></div>
+						<div class="bar-now"></div>
+					</div>
+					<div class="information">
+						<div class="lyric"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!-- 移动端展示页面 -->
+	<div class="mobile">
+		<div class="background"></div>
+		<header>
+			
+			<div class="infom">
+				<p class="info-title">TITLE</p>
+				<p class="info-singer">SINGER</p>
+			</div>
+		</header>
+		<main>
+			<div class="animation">
+				<div class="disc">
+					<div class="img-music"></div>
+				</div>
+			</div>
+			<div class="lyrics active">
+				<ul class="lyrics-list"></ul>
+			</div>
+		</main>
+		<div class="bars">
+			<div class="current">00:00</div>
+			<div class="time-bar">
+				<div class="now-bar"></div>
+			</div>
+			<div class="duration">04:00</div>
+		</div>
+		<div class="ctrl-pannel">
+			<span class="menu-tab">
+					<i class="fa fa-navicon"></i>
+			</span>
+			<span class="play">
+				<i class="iconfont icon-pause"></i>
+			</span>
+			<span class="next">
+				<i class="iconfont icon-xiayiqu"></i>
+			</span>
+		</div>
+		<div class="menu" style="display:none">
+			<ul>
+				<!-- <li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li> -->
+			</ul>				
+		</div>
+	</div>
+</body>
+</html>

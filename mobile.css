@@ -1,0 +1,211 @@
+@import "common.css";
+
+.mobile {
+	display: block;
+}
+.pc {
+	display: none;
+}
+.background {
+  background: url(http://musicdata.baidu.com/data2/music/A54B81CCA1BECCF12880BDF06739766F/252806468/252806468.jpg@s_0,w_300) center center no-repeat;
+  background-size: cover;
+  filter: blur(40px);
+  position: absolute;
+	left: -60px;
+	right: -60px;
+	top: -60px;
+  bottom: -60px;
+  z-index: -1;
+}
+.background::before {
+  content: '';
+  display: block;
+  background: rgba(0, 0, 0, .6);
+  position: absolute;
+  top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+.text {
+	color: #e20000;
+}
+
+
+header {
+  width: 100%;
+  position: relative;
+  padding-bottom: 1vh;
+  border-bottom: 1px solid rgba(255, 255, 255, .3);
+}
+header .infom {
+  margin: 1vh auto;
+  width: 50%;
+  text-align: center;
+}
+header .infom .info-title {
+  font-size: 3vh;
+}
+header .infom .info-singer {
+  font-size: 2vh;
+}
+
+
+main {
+	width: 100%;
+	position: relative;
+	height: 65vh;
+	margin: 2vh auto;
+}
+main .animation {
+	width: 100%;
+	height: 100%;
+}
+main .disc {
+	width: 45vh;
+	height: 45vh;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	/* transform: translate(-50%, -50%); */
+	animation: rotation 9s linear infinite;
+	border-radius: 50%;
+	background: url(./changpian.png) center center no-repeat;
+	background-size: cover;
+}
+@keyframes rotation {
+	0% {
+		transform: translate(-50%, -50%) rotate(0deg);
+		/* -webkit-transform: rotate(0deg); */
+	}
+	100% {
+		transform: translate(-50%, -50%) rotate(360deg);
+		/* -webkit-transform: rotate(360deg); */
+	}
+}
+main .disc .img-music {
+	width: 50%;
+	height: 50%;
+	background: url(http://musicdata.baidu.com/data2/music/A54B81CCA1BECCF12880BDF06739766F/252806468/252806468.jpg@s_0,w_300) center center no-repeat;
+	background-size: cover;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+}
+main .lyrics {
+	color: rgba(255,255,255,.4);
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	overflow: scroll;
+	line-height: 4vh;
+}
+main .lyrics .lyrics-list {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+}
+.now {
+	color: white;
+	font-size: 2.3vh;
+}
+
+
+.bars {
+	position: absolute;
+	left: 0;
+	bottom: calc(30% - 13vh);
+	display: flex;
+	padding: 0 2vh;
+	width: 100%;
+}
+.bars .current {
+	width: 10%;
+	flex: initial;
+	margin: 0  .5vh;
+}
+.bars .duration {
+	width: 10%;
+	flex: initial;
+	margin: 0  .5vh;
+}
+.bars .time-bar {
+	flex: auto;
+	margin: auto;
+	height: .4vh;
+	background: rgba(255, 255, 255, .5);
+	position: relative;
+}
+.bars .time-bar .now-bar {
+	width: 30%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: .4vh;
+	background: rgba(255, 0, 0, 1);
+}
+
+
+
+.ctrl-pannel {
+  position: absolute;
+  bottom: 3vh;
+  left: 0;
+	width: 100%;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.ctrl-pannel span {
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	width: 10vh;
+	height: 10vh;
+}
+.ctrl-pannel .iconfont,
+.ctrl-pannel .fa {
+	font-size: 4vh;
+}
+.ctrl-pannel .play {
+	border: 2px solid #ffffff;
+	border-radius: 50%;
+	padding: 1vh;
+}
+
+
+.menu {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0, .5);
+	font-size: 2.3vh;
+}
+.menu ul {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	max-height: 60vh;
+	padding: 3vh;
+	overflow: scroll;
+	background-color: rgba(255, 255, 255, .85);
+	color: rgba(0,0,0, .7);
+	transition: 1s height;
+}
+.menu ul li {
+
+	padding: 1.5vh 2vh;
+	text-align: center;
+	border-bottom: 1px solid rgba(0,0,0, .15);
+}
